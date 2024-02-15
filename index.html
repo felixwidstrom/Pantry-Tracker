@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" defer></script>
+    <title>Pantry Tracker</title>
+</head>
+<body>
+    <header>
+        <h2>Pantry Tracker</h2>
+        <p class="header_date"></p>
+    </header>
+    <main>
+        <div class="inventory">
+            <div class="tools">
+                <img src="images/plus.png" alt="Plus icon">
+                <input type="text" placeholder="Search:">
+            </div>
+            <div class="popup">
+                <input type="text" placeholder="Name of item:">
+                <input type="number" placeholder="Count">
+                <input type="date" value="">
+                <input type="submit" value="Add" onsubmit="return false;">
+            </div>
+            <div class="list"></div>
+            <img class="help" src="images/question.png" alt="Help button"></div>
+            <div class="help_page">
+                <div class="info">
+                    To add an item, press the plus sign and enter a name, count and expiration date of an article. 
+                    If the article does not have an expiration date, press the date and select clear. To remove an item, 
+                    simply press the entry. The items entered will be saved across sessions in the browser as 
+                    long as the browser's cache is not cleared.
+                    <br><br>
+                    Press anywhere to return...
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

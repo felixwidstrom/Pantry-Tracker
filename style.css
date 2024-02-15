@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: none; 
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #323232;
+    border-radius: 4px; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 64px;
+    display: grid;
+    grid-template: 64px / 192px 1fr 128px;
+    background-color: black;
+    color: white;
+}
+
+header h2 {
+    width: 192px;
+    height: 64px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+header p {
+    width: 128px;
+    height: 64px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    grid-column-start: 3;
+}
+
+main {
+    width: 100vw;
+    height: calc(100vw - 64px);
+    display: flex;
+}
+
+.inventory {
+    width: 90vw;
+    height: calc(90vh - 64px);
+    margin: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.tools {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    border-bottom: 4px solid black;
+}
+
+.tools img {
+    margin: 16px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.tools input {
+    margin: 14px;
+    padding: 16px;
+    width: 256px;
+    height: 32px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+.popup {
+    position: absolute;
+    top: calc(50vh - 128px);
+    left: calc(50vw - 144px);
+    display: none;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: black;
+}
+
+.popup input {
+    width: 256px;
+    height: 32px;
+    margin: 16px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.item {
+    margin: 16px;
+    width: 312px;
+    height: 160px;
+    overflow: overlay;
+    border-radius: 16px;
+    background-color: rgb(192, 192, 192);
+    box-shadow: 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.entry {
+    padding: 4px;
+    display: flex;
+}
+
+.entry:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.help {
+    width: 64px;
+    height: 64px;
+    right: 16px;
+    bottom: 16px;
+    position: fixed;
+    cursor: pointer;
+}
+
+.help_page {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.info {
+    padding: 16px;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+/* Toggle */
+.show {
+    display: flex;
+}
